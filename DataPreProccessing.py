@@ -25,8 +25,6 @@ class DataPreProcessing():
             self.build_x(col_list)
         x = self.buildDataSet()
         x = self.fix_catgory(x)
-        
-
         self.target_y = int(input("please choose target y column number  "))
         self.target_y = col_list[self.target_y]
         y = self.df[self.target_y].values
@@ -42,7 +40,6 @@ class DataPreProcessing():
             print(str(i) + " : " + col_list[i])
         return col_list
     
-
     def build_x(self,col_list):
         self.feature_x = int(input("please choose feature x column number  "))
         self.feature_x = col_list[self.feature_x]
